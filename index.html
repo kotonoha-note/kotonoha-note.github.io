@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#315a48">
+  <title>ことのはノート｜登録不要の暗記カード・小テスト作成</title>
+  <meta name="description" content="用語と意味を貼るだけで、暗記カード・選択式や記述式の小テスト・印刷プリントに。無料・登録不要。英単語や資格の勉強に使える、自分だけの学習ツールです。">
+  <link rel="canonical" href="__SITE_URL__/">
+  <meta property="og:type" content="website"><meta property="og:locale" content="ja_JP"><meta property="og:site_name" content="ことのはノート"><meta property="og:title" content="ことのはノート｜ノートを、覚える力に。"><meta property="og:description" content="貼り付けた用語を、暗記カード・小テスト・プリントに。無料、登録不要。"><meta property="og:url" content="__SITE_URL__/"><meta property="og:image" content="__SITE_URL__/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="icon-180.png"><link rel="stylesheet" href="style.css"><script src="core.js" defer></script><script src="app.js" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"ことのはノート","url":"__SITE_URL__/","applicationCategory":"EducationalApplication","operatingSystem":"Web browser","inLanguage":"ja","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"description":"用語と意味から暗記カード・小テスト・印刷プリントを作成する登録不要の学習ツール。"}</script>
+</head>
+<body>
+<a class="skip-link" href="#workspace">教材づくりへスキップ</a>
+<aside class="sidebar">
+  <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">こ</span><span>ことのは<span class="brand-small">NOTE & LEARN</span></span></a>
+  <div class="side-label">YOUR STUDY SPACE</div>
+  <nav aria-label="メインメニュー"><a class="side-item active" href="#workspace"><span aria-hidden="true">▤</span> 教材をつくる <span class="side-arrow">↗</span></a><button class="side-item" data-library><span aria-hidden="true">▱</span> 保存したノート <span id="noteCount" class="count-badge">1</span></button><a class="side-item" href="#howto"><span aria-hidden="true">?</span> 使い方</a></nav>
+  <div class="side-rule"></div><div class="sidebar-note"><div class="little-leaf" aria-hidden="true">✳</div><p>覚えることを、<br>少しずつ、<br>自分のものに。</p><small>あなたの言葉からはじまる学習。</small></div>
+  <div class="side-bottom"><span class="status-dot"></span> 無料・アカウント登録不要<small>ノートはこのブラウザに保存</small></div>
+</aside>
+<div class="shell">
+  <header class="topbar"><span class="breadcrumb">あなたの学習スペース</span><div class="top-actions"><span id="saveStatus" role="status">このブラウザに保存</span><button class="header-link" data-library>保存したノート</button><a class="header-link" href="#howto">使い方</a></div></header>
+  <main>
+    <section class="intro"><div><div class="eyebrow">A LITTLE NOTE. A BIG STEP.</div><h1>ノートを、<span>覚える力に。</span></h1><p>用語と意味を貼るだけで、暗記カード・小テスト・プリントに。<br>いつものノートから、自分にぴったりの教材をつくろう。</p><div class="trust-row"><span>無料</span><span>登録不要</span><span>入力したノートは非公開</span></div></div><div class="intro-stamp" aria-hidden="true"><span>YOUR</span><strong>small<br>steps.</strong><span>EVERY DAY</span></div></section>
+    <noscript><p class="error-box">この学習ツールにはJavaScriptが必要です。ブラウザの設定でJavaScriptを有効にしてください。</p></noscript>
+    <div id="storageWarning" class="warning-box" role="alert" hidden></div>
+    <div id="workspace" class="workspace">
+      <section class="editor-panel panel" aria-labelledby="editorHeading">
+        <div class="panel-head"><div><span class="step-num">01</span><h2 id="editorHeading">学ぶことを書き出す</h2></div><button id="newBtn" class="text-button">＋ 新しいノート</button></div>
+        <div id="sampleNotice" class="sample-notice"><span>まずはサンプルで試せます</span><span class="sample-dot" aria-hidden="true">↘</span></div>
+        <label for="noteTitle" class="field-label">ノートのタイトル</label><input id="noteTitle" maxlength="80" placeholder="例：英単語 第1章" autocomplete="off">
+        <div class="label-row"><label for="source" class="field-label">用語と意味</label><span class="subtle">1行に1組</span></div>
+        <p id="formatHelp" class="input-hint">「apple : りんご」のように入力。表の2列も貼り付けられます。</p>
+        <textarea id="source" maxlength="450000" spellcheck="false" aria-describedby="formatHelp inputError" placeholder="apple : りんご&#10;library : 図書館&#10;journey : 旅"></textarea>
+        <div class="editor-meta"><label for="separator">区切り <select id="separator"><option value="auto">自動判定</option><option value="colon">コロン（:）</option><option value="tab">タブ（表の2列）</option><option value="comma">カンマ（,）</option></select></label><span id="lineCount">0 / 200語</span></div>
+        <div id="inputError" class="error-box" role="alert" hidden></div>
+        <button id="generateBtn" class="primary generate">このノートで学ぶ <span aria-hidden="true">→</span></button>
+        <p id="editHint" class="input-hint edit-hint">内容を変えたら、このボタンで教材に反映します。</p>
+        <div class="sample-section"><span class="mini-label">サンプルから試す</span><div class="sample-buttons"><button data-sample="english">英単語</button><button data-sample="it">IT用語</button><button data-sample="idiom">四字熟語</button></div></div>
+        <p class="privacy-note">ノートは公開されません。入力内容を外部へ送信せず、ブラウザ内で教材を作ります。</p>
+      </section>
+      <section class="study-panel panel" aria-labelledby="studyHeading">
+        <div class="panel-head"><div><span class="step-num">02</span><h2 id="studyHeading">自分のペースで学ぶ</h2></div><span class="small-tag green" id="wordBadge">0 語</span></div>
+        <div class="tabs" role="tablist" aria-label="学習モード"><button id="tab-cards" role="tab" aria-selected="true" aria-controls="learningArea" data-mode="cards">暗記カード</button><button id="tab-quiz" role="tab" aria-selected="false" aria-controls="learningArea" data-mode="quiz">小テスト</button><button id="tab-print" role="tab" aria-selected="false" aria-controls="learningArea" data-mode="print">プリント</button></div>
+        <p id="pendingNotice" class="pending-notice" hidden>編集した内容はまだ教材に反映されていません。「教材を更新する」を押してください。</p>
+        <div id="learningArea" role="tabpanel" aria-labelledby="tab-cards" tabindex="0"></div>
+      </section>
+    </div>
+    <section class="how-section" id="howto" aria-labelledby="howHeading"><div class="section-label"><div><span class="eyebrow">HOW IT WORKS</span><h2 id="howHeading">いつもの勉強に、3つのステップ。</h2></div><span class="handwritten" aria-hidden="true">Make it yours.</span></div><div class="steps"><article><span class="step-num">01</span><h3>用語をまとめる</h3><p>英単語、授業のキーワード、資格の用語。覚えたい言葉と意味を1行ずつ入力します。</p></article><article><span class="step-num">02</span><h3>思い出して、確かめる</h3><p>カードをめくって確認。小テストは選択式・記述式を選べて、間違えた問題だけ復習できます。</p></article><article><span class="step-num">03</span><h3>続きは、また明日</h3><p>ノートと「覚えた」記録はこのブラウザに自動保存。紙で学びたいときはプリントにも。</p></article></div></section>
+    <section class="faq-section" id="faq" aria-labelledby="faqHeading"><div><span class="eyebrow">GOOD TO KNOW</span><h2 id="faqHeading">はじめる前の、ちょっとした疑問。</h2><p>むずかしい設定はありません。<br>まずはサンプルを、ひとめくり。</p></div><div class="faq-list"><details><summary>本当に無料ですか？登録は必要ですか？</summary><p>現在の機能はすべて無料で使えます。会員登録やログイン、クレジットカードの登録は不要です。</p></details><details><summary>文章や写真からAIが問題を作ってくれますか？</summary><p>いいえ。今は自分で入力した「用語と意味」の組から教材を作るツールです。文章・写真・PDFの解析や、内容の正しさを判定する機能はありません。</p></details><details><summary>ノートはどこに保存されますか？</summary><p>この端末の、このブラウザ内です。30冊まで保存できます。ブラウザのデータを消したり、プライベートブラウズを終了したりすると失われることがあります。「保存したノート」から定期的にバックアップしてください。同じ端末を使う人はノートを閲覧できます。</p></details><details><summary>スマホとパソコンで同じノートを使えますか？</summary><p>自動同期はありません。「保存したノート」からJSONファイルを保存し、別の端末で読み込んでください。読み込んだノートは別のノートとして追加されます。</p></details><details><summary>表を貼り付けても、うまく読み込めません。</summary><p>1列目に用語、2列目に意味を置き、見出しを除いた2列をコピーしてください。区切りを「タブ」にすると確実です。1組の中の改行や、引用符付きCSVには対応していません。</p></details><details><summary>テストの採点基準は？</summary><p>記述式は登録した用語と一致すれば正解です。英字の大小、全角・半角、空白の違いは区別しません。別の言い方や誤字は判定できません。選択式の候補は同じノートの用語から作ります。</p></details><details><summary>PDFにはどうやって保存しますか？</summary><p>「プリント」の「印刷 / PDF保存」を押し、端末の印刷画面でPDF保存を選びます。端末やブラウザによって操作は異なります。紙に印刷する場合はA4縦を選んでください。</p></details></div></section>
+    <footer><a class="footer-brand" href="./">ことのはノート</a><span>小さな学びを、毎日の習慣に。</span><nav aria-label="サイト情報"><a href="about.html">このサイトについて</a><a href="privacy.html">データの扱い</a><a href="terms.html">利用上の注意</a></nav></footer>
+  </main>
+</div>
+<dialog id="libraryDialog" aria-labelledby="libraryHeading"><div class="dialog-head"><div><span class="eyebrow">YOUR NOTEBOOKS</span><h2 id="libraryHeading">保存したノート</h2></div><form method="dialog"><button class="close-button" aria-label="閉じる">×</button></form></div><p class="input-hint">このブラウザだけに保存されています。大切なノートはファイルにも保存してください。</p><div class="library-actions"><button id="libraryNewBtn" class="secondary">＋ 新しいノート</button><button id="importBtn" class="secondary">ファイルを読み込む</button><input id="importFile" type="file" accept="application/json,.json" hidden></div><div id="libraryList"></div><div class="library-bottom"><button id="backupBtn" class="primary">全ノートをバックアップ</button><span id="libraryCapacity" class="subtle"></span></div><p class="input-hint">JSONファイルには入力内容が含まれます。共有するときは内容を確認してください。</p></dialog>
+<dialog id="confirmDialog" aria-labelledby="confirmHeading"><h2 id="confirmHeading">確認</h2><p id="confirmText"></p><div class="quiz-action"><button id="cancelConfirm" class="secondary">キャンセル</button><button id="acceptConfirm" class="primary">続ける</button></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div><div id="printSheet"></div>
+</body></html>
